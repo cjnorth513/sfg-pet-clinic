@@ -1,1 +1,1 @@
-# sfg-petclinic
+# sfg-pet-clinic
