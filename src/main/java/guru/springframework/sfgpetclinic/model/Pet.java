@@ -1,10 +1,54 @@
 package guru.springframework.sfgpetclinic.model;
 
-import org.aspectj.weaver.patterns.PerTypeWithin;
+import javax.persistence.*;
 
-public class Pet extends BaseEntitiy{
+@Entity
+@Table(name = "pets")
+public class Pet extends BaseEntity{
 
-    private String petType;
-    private String owner;
+    @Column(name="name")
+    private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "type_ID")
+    private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
+
+    @Column(name = "birth_date")
+    private String birthDate;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public PetType getPetType() {
+        return petType;
+    }
+
+    public void setPetType(PetType petType) {
+        this.petType = petType;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
 }
