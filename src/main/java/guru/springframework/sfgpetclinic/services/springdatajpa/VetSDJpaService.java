@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.services.springdatajpa;
 
+import guru.springframework.sfgpetclinic.model.Specialty;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.repositories.VetRepository;
 import guru.springframework.sfgpetclinic.services.VetService;
@@ -15,7 +16,7 @@ public abstract class VetSDJpaService implements VetService {
 
     private final VetRepository vetRepository;
 
-    protected VetSDJpaService(VetRepository vetRepository) {
+    public VetSDJpaService(VetRepository vetRepository) {
         this.vetRepository = vetRepository;
     }
 
@@ -32,7 +33,7 @@ public abstract class VetSDJpaService implements VetService {
     }
 
     @Override
-    public Vet save(Vet object) {
+    public Vet save(Specialty object) {
         return vetRepository.save(object);
     }
 

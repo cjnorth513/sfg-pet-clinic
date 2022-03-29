@@ -1,5 +1,7 @@
 package guru.springframework.sfgpetclinic.services;
 
+import guru.springframework.sfgpetclinic.model.Specialty;
+
 import java.util.Set;
 
 public class PetService implements CrudService{
@@ -14,7 +16,7 @@ public class PetService implements CrudService{
     }
 
     @Override
-    public Object save(Object object) {
+    public Object save(Specialty object) {
         return null;
     }
 

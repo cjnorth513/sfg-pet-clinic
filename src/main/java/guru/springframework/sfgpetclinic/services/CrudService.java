@@ -1,5 +1,7 @@
 package guru.springframework.sfgpetclinic.services;
 
+import guru.springframework.sfgpetclinic.model.Specialty;
+
 import java.util.Set;
 
 public interface CrudService<T, ID> {
@@ -7,7 +9,7 @@ public interface CrudService<T, ID> {
 
     T findById(ID id);
 
-    T save(T object);
+    T save(Specialty object);
 
     void delete(T object);
 
