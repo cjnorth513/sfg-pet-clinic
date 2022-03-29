@@ -4,7 +4,7 @@ import guru.springframework.sfgpetclinic.model.Specialty;
 
 import java.util.Set;
 
-public class PetService implements CrudService{
+public interface PetService extends CrudService{
     @Override
     public Set findAll() {
         return null;
