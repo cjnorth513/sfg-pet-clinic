@@ -10,7 +10,7 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class PetServiceMap extends AbstractMapService<PetType, Long> implements PetTypeService {
+public class PetMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 
     @Override
     public Set<PetType> findAll() {
